@@ -7,6 +7,8 @@ import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 
+import { VueQueryPlugin } from '@tanstack/vue-query';
+
 import '@/assets/styles.scss';
 import '@/assets/tailwind.css';
 
@@ -23,5 +25,6 @@ app.use(PrimeVue, {
 });
 app.use(ToastService);
 app.use(ConfirmationService);
+app.use(VueQueryPlugin)
 
 app.mount('#app');

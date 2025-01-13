@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "@primevue/themes": "^4.2.4",
+        "@tanstack/vue-query": "^5.64.0",
+        "axios": "^1.7.9",
         "chart.js": "3.3.2",
         "primeicons": "^7.0.0",
         "primevue": "^4.2.4",

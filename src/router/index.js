@@ -17,10 +17,17 @@ const router = createRouter({
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
                 },
+                // {
+                //     path: '/formlayout',
+                //     name: 'formlayout',
+                //     component: () => import('@/views/uikit/FormLayout.vue')
+                // },
                 {
-                    path: '/formlayout',
-                    name: 'formlayout',
-                    component: () => import('@/views/uikit/FormLayout.vue')
+                    path: '/config',
+                    name: 'config',
+                    // component: () => import('@/views/uikit/FormLayout.vue')
+                    component: () => import('@/components/config/BotConfigurations.vue')
+                    // component: () => import('@/views/Botconfig.vue')
                 },
                 {
                     path: '/uikit/input',
