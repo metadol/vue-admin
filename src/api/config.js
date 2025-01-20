@@ -19,7 +19,9 @@ export const updateConfig = async (id, data) => {
 };
 
 // Delete config
-export const deleteConfig = async (id) => {
-    const response = await axiosInstance.delete(`config/${id}`);
+export const deleteConfig = async (ids) => {
+    const response = await axiosInstance.delete(`config`, {
+        data: { ids: Array.isArray(ids) ? ids : [ids] }
+    });
     return response.data;
 };

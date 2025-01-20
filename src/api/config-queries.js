@@ -24,12 +24,13 @@ export const useCreateConfig = () => {
 export const useUpdateConfig = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: updateConfig,
+        mutationFn: ({ id, data }) => updateConfig(id, data), // Destructure id and data here
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['config'] });
-        }
+        },
     });
 };
+
 
 // Delete Config Mutation
 export const useDeleteConfig = () => {
